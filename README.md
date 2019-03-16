@@ -2,9 +2,11 @@
 
 > Npm package that simplifies deployment and usage of erc tokens on ethereum Blockchain
 
-[![NPM Version][npm-image]][npm-url]
+
 [![Build Status](https://travis-ci.com/SauravKanchan/ERCManager.svg?token=2yjAythLGDwdY1XXtyDa&branch=master)](https://travis-ci.com/SauravKanchan/ERCManager)
-[![Downloads Stats][npm-downloads]][npm-url]
+[![NPM Version][npm-image]][npm-url]
+[![Web 3](https://img.shields.io/badge/web3-1.0.1-blue.svg)](https://www.npmjs.com/package/web3)
+
 
 One to two paragraph statement about your product and what it does.
 

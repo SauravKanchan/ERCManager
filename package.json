@@ -1,6 +1,6 @@
 {
   "name": "ercmanager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Npm package that simplifies deployment and usage of erc tokens on ethereum Blockchain",
   "main": "lib/index.js",
   "bin": {

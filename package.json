@@ -1,8 +1,8 @@
 {
   "name": "ercmanager",
   "version": "1.0.0",
-  "description": "Tool to make and manage ERC20 Tokens",
-  "main": "index.js",
+  "description": "Npm package that simplifies deployment and usage of erc tokens on ethereum Blockchain",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "test"

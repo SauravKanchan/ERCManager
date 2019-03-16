@@ -1,5 +1,8 @@
 language: node_js
 node_js:
-  - "4"
-  - "6"
-  - "7"
+  - "8.13"
+before_script:
+  - npm install
+  - chmod 0777 test.sh
+script:
+  - bash test.sh

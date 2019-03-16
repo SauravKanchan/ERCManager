@@ -54,6 +54,68 @@ async function command() {
         validate: stringNotEmpty
     });
 
+    const { provider } = await prompt({
+        type: 'input',
+        name: 'provider',
+        initial: "https://ropsten.infura.io/v3/edfd4451e332430c99e3747105308a95",
+        message: 'Enter Web3 Provider URL',
+        validate: stringNotEmpty
+    });
+
+    const web3 = new Web3(new Web3.providers.HttpProvider(provider));
+
+    let gasPriceHex = web3.utils.toHex(web3.utils.toWei('10', 'gwei'))
+    let gasLimitHex = web3.utils.toHex(6000000);
+    let nonce =  await web3.eth.getTransactionCount(accountAddress, "pending");
+    let nonceHex = web3.utils.toHex(nonce);
+
+    // const erc20TokenPath = path.resolve(__dirname, 'contracts', 'EIP20.sol');
+    // const erc20InterfacePath = path.resolve(__dirname, 'contracts', 'EIP20Interface.sol');
+    // const source = fs.readFileSync(erc20TokenPath, 'UTF-8');
+
+    // const findImports = (path) => {
+        // if(path === "EIP20Interface.sol")
+            // path = erc20InterfacePath;
+        // return {
+            // contents: fs.readFileSync(erc20InterfacePath).toString()
+        // }
+    // }
+    // const inputs = {
+        // 'EIP20.sol': source.toString(),
+    // };
+
+    // let compiledCode = solc.compile({sources: inputs}, 1, findImports);
+    // let abi = JSON.parse(compiledCode.contracts['EIP20.sol:EIP20'].interface);
+    // let bytecode = compiledCode.contracts['EIP20.sol:EIP20'].bytecode;
+
+    let contractData = new web3.eth.Contract(abi).deploy({
+        data: '0x' + bytecode,
+        arguments: [tokenQuantity, tokenName, 6, tokenSymbol],
+    });
+
+    let rawTx = {
+        nonce: nonceHex,
+        gasPrice: gasPriceHex,
+        gasLimit: gasLimitHex,
+        data: contractData.encodeABI(),
+        from: accountAddress
+    };
+
+    let privateKey = Buffer.from(accountKey, 'hex');
+    let tx = new Tx(rawTx);
+    tx.sign(privateKey);
+    let serializedTx = tx.serialize();
+    let raw = '0x' + serializedTx.toString('hex');
+
+    web3.eth.sendSignedTransaction(raw, (err, tx) => {
+        if(err) {
+            console.log("Error occurred while deploying contract. Ensure correct address, private key and provider url");
+            return;
+        }
+        if(tx.contractAddress) {
+            console.log(tx.contractAddress);
+        }
+    });
 }
 
 command();

@@ -41,7 +41,7 @@ npm test
 ## Meta
 
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/SauravKanchan/ERCManager](https://github.com/SauravKanchan/)
 

@@ -14,7 +14,7 @@ function stringNotEmpty(string) {
     return true
 }
 
-async function command() {
+async function createNewErcToken() {
     const { tokenName } = await prompt({
         type: 'input',
         initial: 'Binance Coin',
@@ -111,15 +111,10 @@ async function command() {
     let serializedTx = tx.serialize();
     let raw = '0x' + serializedTx.toString('hex');
 
-    web3.eth.sendSignedTransaction(raw, (err, tx) => {
-        if(err) {
-            console.log("Error occurred while deploying contract. Ensure correct address, private key and provider url");
-            return;
-        }
-        if(tx.contractAddress) {
-            console.log("Your contract is available at " + tx.contractAddress);
-        }
-    });
+    let result = await web3.eth.sendSignedTransaction(raw);
+    if(result.contractAddress) {
+        return result.contractAddress;
+    }
 }
 
-command();
+module.exports.createNewErcToken = createNewErcToken;

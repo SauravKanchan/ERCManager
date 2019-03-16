@@ -62,6 +62,9 @@ async function command() {
         validate: stringNotEmpty
     });
 
+
+    console.log("Deploying...");
+
     const web3 = new Web3(new Web3.providers.HttpProvider(provider));
 
     let gasPriceHex = web3.utils.toHex(web3.utils.toWei('10', 'gwei'))
@@ -113,7 +116,7 @@ async function command() {
             return;
         }
         if(tx.contractAddress) {
-            console.log(tx.contractAddress);
+            console.log("Your contract is available at " + tx.contractAddress);
         }
     });
 }

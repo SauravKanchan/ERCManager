@@ -1,0 +1,32 @@
+{
+  "name": "ercmanager",
+  "version": "1.0.0",
+  "description": "Tool to make and manage ERC20 Tokens",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SauravKanchan/ERCManager.git"
+  },
+  "keywords": [
+    "ERC20",
+    "ERC721",
+    "WEB3",
+    "Rinkeby",
+    "Ropston",
+    "Ethereum",
+    "Blockchain"
+  ],
+  "author": "Saurav Kanchan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SauravKanchan/ERCManager/issues"
+  },
+  "homepage": "https://github.com/SauravKanchan/ERCManager#readme"
+}

@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./test.sh"
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",

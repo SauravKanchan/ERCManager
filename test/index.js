@@ -1,10 +1,4 @@
-const { expect } = require('chai')
+const ERCManager = require('../lib/index')
+var erc20 = new ERCManager()
+erc20.transfer()
 
-const lib = require('../lib')
-
-describe('My package', function () {
-  it('should pass', function () {
-    const answer = lib()
-    expect(answer).to.equals(42)
-  })
-})

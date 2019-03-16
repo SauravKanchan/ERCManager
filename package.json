@@ -30,7 +30,9 @@
   },
   "homepage": "https://github.com/SauravKanchan/ERCManager#readme",
   "dependencies": {
+    "enquirer": "^2.3.0",
     "ethereumjs-tx": "^1.3.7",
+    "solc": "^0.4.21",
     "web3": "^1.0.0-beta.48"
   }
 }

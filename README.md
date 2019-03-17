@@ -1,6 +1,6 @@
 # ERCManager
 
-> Npm package that simplifies deployment and usage of erc tokens on ethereum Blockchain
+> npm package that simplifies deployment and usage of ERC tokens on Ethereum Blockchain
 
 
 [![Build Status](https://travis-ci.com/SauravKanchan/ERCManager.svg?token=2yjAythLGDwdY1XXtyDa&branch=master)](https://travis-ci.com/SauravKanchan/ERCManager)
@@ -37,6 +37,9 @@ erc20.create(symbol="SNK", token_name = "Kanchan Coin").then(function (data) {
 });
 
 ```
+>  - The constructor creates the ERC20 token.
+>  - The essential parameters are address of the creator and  their private key.
+>  - The optional parameters are gas required, maximum limit of gas and the web3 provider(default = rinkeby.infura.io).
 
 Connect to a deployed token.
 ```javascript

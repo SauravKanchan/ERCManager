@@ -4,10 +4,9 @@
 </p>
 
 
-# ERCManager
 
-> npm package that simplifies deployment and usage of ERC tokens on Ethereum Blockchain
 
+<div align = "center">
 
 [![Build Status](https://travis-ci.com/SauravKanchan/ERCManager.svg?token=2yjAythLGDwdY1XXtyDa&branch=master)](https://travis-ci.com/SauravKanchan/ERCManager)
 [![NPM Version][npm-image]][npm-url]
@@ -15,7 +14,9 @@
 [![Web 3](https://img.shields.io/badge/web3-1.0.1-blue.svg)](https://www.npmjs.com/package/web3)
 [![Hits](http://hits.dwyl.io/SauravKanchan/ERCManager.svg)][npm-url]
 
+</div>
 
+# ERCManager
 
 A node package in order to deploy ERC20 compliant contracts or introduce new ERC20 tokens in the Ethereum blockchain. Simplify interaction with tokens , connectivity with web3.js all in a single package. Launch your very own token or transact with other pre-deployed tokens and raise huge funds in maybe your next ICO.
 

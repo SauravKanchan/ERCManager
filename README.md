@@ -1,6 +1,6 @@
 # ERCManager
 
-> Npm package that simplifies deployment and usage of erc tokens on ethereum Blockchain
+> npm package that simplifies deployment and usage of ERC tokens on Ethereum Blockchain
 
 
 [![Build Status](https://travis-ci.com/SauravKanchan/ERCManager.svg?token=2yjAythLGDwdY1XXtyDa&branch=master)](https://travis-ci.com/SauravKanchan/ERCManager)
@@ -37,6 +37,9 @@ erc20.create(symbol="SNK", token_name = "Kanchan Coin").then(function (data) {
 });
 
 ```
+>  - The constructor creates the ERC20 token.
+>  - The essential parameters are address of the creator and  their private key.
+>  - The optional parameters are gas required, maximum limit of gas and the web3 provider(default = rinkeby.infura.io).
 
 Connect to a deployed token.
 ```javascript
@@ -55,9 +58,34 @@ deployed_token.balance().then(function (data) {
 })
 ```
 
-Trasnfer tokens: transfer(destination_account,amount)
+Transfer tokens: transfer(destination_account,amount)
 ```javascript
 deployed_token.transfer("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980",1).then(function (data) {
+    console.log(data);
+})
+
+```
+
+Approve spender to spend your tokens: approve(spender_address, amount)
+```javascript
+deployed_token.approve("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980",100).then(function (data) {
+    console.log(data);
+})
+
+```
+
+
+Transfer token from approved account to another: transferFrom(from_address, to_address, amount)
+```javascript
+deployed_token.transferFrom("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980", "0x420493959C379D8375aFFA6Bb0De9E5C87f0A4c3",100).then(function (data) {
+    console.log(data);
+})
+
+```
+
+Check Allowance: checkAllowance(spender_address, amount)
+```javascript
+deployed_token.checkAllowance("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980", 100).then(function (data) {
     console.log(data);
 })
 

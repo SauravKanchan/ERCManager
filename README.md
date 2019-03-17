@@ -98,6 +98,15 @@ deployed_token.watch_transfer(function (data) {
 })
 ```
 
+Watch Approval of tokens.
+```javascript
+deployed_token.watch_approval(function (data) {
+   console.log(data.returnValues._from,data.returnValues._to,data.returnValues._value)
+})
+```
+
+
+
 ## Development setup
 
 

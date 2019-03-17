@@ -5,6 +5,7 @@
 
 [![Build Status](https://travis-ci.com/SauravKanchan/ERCManager.svg?token=2yjAythLGDwdY1XXtyDa&branch=master)](https://travis-ci.com/SauravKanchan/ERCManager)
 [![NPM Version][npm-image]][npm-url]
+[![Hits](http://hits.dwyl.io/SauravKanchan/ERCManager.svg)][npm-url]
 [![Web 3](https://img.shields.io/badge/web3-1.0.1-blue.svg)](https://www.npmjs.com/package/web3)
 
 
@@ -25,11 +26,19 @@ A few motivating and useful examples of how your product can be used. Spice this
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
+```javascript
+var ERCManager = require('ercmanager');
+var erc20 = new ERCManager()
+erc20.transfer()
+```
+
 ## Development setup
 
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
 
 ```sh
+git clone https://github.com/SauravKanchan/ERCManager
+cd ERCManager
+npm install
 npm test
 ```
 
@@ -45,7 +54,7 @@ npm test
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/SauravKanchan/ERCManager](https://github.com/SauravKanchan/)
+[LICENSE](https://github.com/SauravKanchan/ERCManager/blob/master/LICENSE)
 
 ### Contributing
 

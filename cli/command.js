@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-const path = require('path');
-const fs = require('fs');
-const solc = require('solc');
 const Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 const { prompt } = require('enquirer');
@@ -72,25 +69,6 @@ async function createNewErcToken() {
     let gasLimitHex = web3.utils.toHex(6000000);
     let nonce =  await web3.eth.getTransactionCount(accountAddress, "pending");
     let nonceHex = web3.utils.toHex(nonce);
-
-    // const erc20TokenPath = path.resolve(__dirname, 'contracts', 'EIP20.sol');
-    // const erc20InterfacePath = path.resolve(__dirname, 'contracts', 'EIP20Interface.sol');
-    // const source = fs.readFileSync(erc20TokenPath, 'UTF-8');
-
-    // const findImports = (path) => {
-        // if(path === "EIP20Interface.sol")
-            // path = erc20InterfacePath;
-        // return {
-            // contents: fs.readFileSync(erc20InterfacePath).toString()
-        // }
-    // }
-    // const inputs = {
-        // 'EIP20.sol': source.toString(),
-    // };
-
-    // let compiledCode = solc.compile({sources: inputs}, 1, findImports);
-    // let abi = JSON.parse(compiledCode.contracts['EIP20.sol:EIP20'].interface);
-    // let bytecode = compiledCode.contracts['EIP20.sol:EIP20'].bytecode;
 
     let contractData = new web3.eth.Contract(abi).deploy({
         data: '0x' + bytecode,

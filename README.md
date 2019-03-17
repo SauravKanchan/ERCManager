@@ -17,8 +17,9 @@
 </div>
 
 
-
-A node package in order to deploy ERC20 compliant contracts or introduce new ERC20 tokens in the Ethereum blockchain. Simplify interaction with tokens , connectivity with web3.js all in a single package. Launch your very own token or transact with other pre-deployed tokens and raise huge funds in maybe your next ICO.
+<p align = "center">
+A node package in order to deploy ERC20 compliant contracts or introduce new ERC20 tokens in the Ethereum Blockchain. Simplify interaction with tokens , connectivity with web3.js all in a single package. Launch your very own token or transact with other pre-deployed tokens and raise huge funds in maybe your next ICO.
+</p>
 
 ## Installation
 

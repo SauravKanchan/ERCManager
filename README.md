@@ -37,6 +37,17 @@ erc20.create(symbol="SNK", token_name = "Kanchan Coin").then(function (data) {
 });
 
 ```
+Connect to a deployed token.
+
+
+```javascript
+let deployed_token = new ERCManager({
+    myAddress: "0x9CC14A288BB5cb9Ec0e85b606Cb6585BB7ca6a8E",
+    privateKey: '88BAEA1C45C1434E494604F48A39EEDB780BA71086D109B78CC3B7D41AA49773',
+    contractAddress: "0x8298cb3a2dc8fe592504dea860ad7be1882cdcfa",
+});
+
+```
 
 
 

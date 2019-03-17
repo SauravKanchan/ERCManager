@@ -106,7 +106,7 @@ deployed_token.watch_transfer(function (data) {
 })
 ```
 
-Watch Approval of tokens.
+**Watch Approval of tokens.**
 ```javascript
 deployed_token.watch_approval(function (data) {
    console.log(data.returnValues._from,data.returnValues._to,data.returnValues._value)
@@ -147,7 +147,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 ### Contributing
 
- * We're are open to `enhancements` & `bug-fixes` :smile:.
+ * We are open to addressing `bug-fixes`.
  * Feel free to add issues and submit patches
 
 ## Contributors

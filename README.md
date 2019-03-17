@@ -126,6 +126,8 @@ npm test
 
 ## Release History
 
+* 1.0.4
+    * Add transferFrom, Approve, CheckAllowance
 * 1.0.3
     * Create new tokens 
 * 1.0.2

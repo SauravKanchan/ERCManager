@@ -24,8 +24,7 @@ npm install ercmanager --save
 Create a new ERC20 token.
 
 ```javascript
-const ERCManager = require('../lib/index');
-
+const ERCManager = require('ercmanager');
 
 let erc20 = new ERCManager({
         myAddress: "0x9CC14A288BB5cb9Ec0e85b606Cb6585BB7ca6a8E",
@@ -37,9 +36,8 @@ erc20.create(symbol="SNK", token_name = "Kanchan Coin").then(function (data) {
 });
 
 ```
+
 Connect to a deployed token.
-
-
 ```javascript
 let deployed_token = new ERCManager({
     myAddress: "0x9CC14A288BB5cb9Ec0e85b606Cb6585BB7ca6a8E",
@@ -49,6 +47,12 @@ let deployed_token = new ERCManager({
 
 ```
 
+Check balance of an account
+```javascript
+deployed_token.balance().then(function (data) {
+    console.log(data);
+})
+```
 
 
 ## Development setup

@@ -19,7 +19,12 @@ let deployed_token = new ERCManager({
     contractAddress: "0x8298cb3a2dc8fe592504dea860ad7be1882cdcfa",
 });
 
+deployed_token.balance().then(function (data) {
+    console.log(data);
+})
+
 deployed_token.transfer("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980",1).then(function (data) {
     console.log(data);
 })
+
 

@@ -6,12 +6,12 @@
 [![Build Status](https://travis-ci.com/SauravKanchan/ERCManager.svg?token=2yjAythLGDwdY1XXtyDa&branch=master)](https://travis-ci.com/SauravKanchan/ERCManager)
 [![NPM Version][npm-image]][npm-url]
 ![npm](https://img.shields.io/npm/dt/ercmanager.svg)
-[![Hits](http://hits.dwyl.io/SauravKanchan/ERCManager.svg)][npm-url]
 [![Web 3](https://img.shields.io/badge/web3-1.0.1-blue.svg)](https://www.npmjs.com/package/web3)
+[![Hits](http://hits.dwyl.io/SauravKanchan/ERCManager.svg)][npm-url]
 
 
-One to two paragraph statement about your product and what it does.
 
+A node package in order to deploy ERC20 compliant contracts or introduce new ERC20 tokens in the Ethereum blockchain. Simplify interaction with tokens , connectivity with web3.js all in a single package. Launch your very own token or transact with other pre-deployed tokens and raise huge funds in maybe your next ICO.
 
 ## Installation
 
@@ -48,7 +48,7 @@ let deployed_token = new ERCManager({
 
 ```
 
-Check balance of an account
+Check balance of an account.
 ```javascript
 deployed_token.balance().then(function (data) {
     console.log(data);
@@ -86,6 +86,13 @@ deployed_token.checkAllowance("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980", 100)
     console.log(data);
 })
 
+```
+
+Watch transfer of tokens.
+```javascript
+deployed_token.watch_transfer(function (data) {
+   console.log(data.returnValues._from,data.returnValues._to,data.returnValues._value)
+})
 ```
 
 ## Development setup

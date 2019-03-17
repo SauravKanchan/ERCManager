@@ -10,7 +10,6 @@ erc20.create(symbol = "SNK", token_name = "Kanchan Coin").then(function (data) {
     erc20.transfer("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980",1).then(function (data) {
        console.log(data);
     })
-
 });
 
 let deployed_token = new ERCManager({

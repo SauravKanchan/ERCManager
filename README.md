@@ -54,6 +54,13 @@ deployed_token.balance().then(function (data) {
 })
 ```
 
+Trasnfer tokens: transfer(destination_account,amount)
+```javascript
+deployed_token.transfer("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980",1).then(function (data) {
+    console.log(data);
+})
+
+```
 
 ## Development setup
 

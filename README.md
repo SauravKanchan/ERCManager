@@ -5,6 +5,7 @@
 
 [![Build Status](https://travis-ci.com/SauravKanchan/ERCManager.svg?token=2yjAythLGDwdY1XXtyDa&branch=master)](https://travis-ci.com/SauravKanchan/ERCManager)
 [![NPM Version][npm-image]][npm-url]
+![npm](https://img.shields.io/npm/dt/ercmanager.svg)
 [![Hits](http://hits.dwyl.io/SauravKanchan/ERCManager.svg)][npm-url]
 [![Web 3](https://img.shields.io/badge/web3-1.0.1-blue.svg)](https://www.npmjs.com/package/web3)
 
@@ -74,6 +75,10 @@ npm test
 
 ## Release History
 
+* 1.0.3
+    * Create new tokens 
+* 1.0.2
+    * Fix Minor bugs 
 * 1.0.1
     * Add transfer
 * 1.0.0

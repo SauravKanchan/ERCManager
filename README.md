@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=300px src="./ERCManager.jpg" alt="ERCManager-logo"></a>
+</p>
+
+
 # ERCManager
 
 > npm package that simplifies deployment and usage of ERC tokens on Ethereum Blockchain
@@ -22,7 +28,7 @@ npm install ercmanager --save
 
 
 ## Usage example
-Create a new ERC20 token.
+**Create a new ERC20 token.**
 
 ```javascript
 const ERCManager = require('ercmanager');
@@ -41,7 +47,7 @@ erc20.create(symbol="SNK", token_name = "Kanchan Coin").then(function (data) {
 >  - The essential parameters are address of the creator and  their private key.
 >  - The optional parameters are gas required, maximum limit of gas and the web3 provider(default = rinkeby.infura.io).
 
-Connect to a deployed token.
+**Connect to a deployed token.**
 ```javascript
 let deployed_token = new ERCManager({
     myAddress: "0x9CC14A288BB5cb9Ec0e85b606Cb6585BB7ca6a8E",
@@ -51,14 +57,14 @@ let deployed_token = new ERCManager({
 
 ```
 
-Check balance of an account.
+**Check balance of an account.**
 ```javascript
 deployed_token.balance().then(function (data) {
     console.log(data);
 })
 ```
 
-Transfer tokens: transfer(destination_account,amount)
+**Transfer tokens: transfer(destination_account,amount)**
 ```javascript
 deployed_token.transfer("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980",1).then(function (data) {
     console.log(data);
@@ -66,7 +72,7 @@ deployed_token.transfer("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980",1).then(fun
 
 ```
 
-Approve spender to spend your tokens: approve(spender_address, amount)
+**Approve spender to spend your tokens: approve(spender_address, amount)**
 ```javascript
 deployed_token.approve("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980",100).then(function (data) {
     console.log(data);
@@ -75,7 +81,7 @@ deployed_token.approve("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980",100).then(fu
 ```
 
 
-Transfer token from approved account to another: transferFrom(from_address, to_address, amount)
+**Transfer token from approved account to another: transferFrom(from_address, to_address, amount)**
 ```javascript
 deployed_token.transferFrom("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980", "0x420493959C379D8375aFFA6Bb0De9E5C87f0A4c3",100).then(function (data) {
     console.log(data);
@@ -83,7 +89,7 @@ deployed_token.transferFrom("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980", "0x420
 
 ```
 
-Check Allowance: checkAllowance(spender_address, amount)
+**Check Allowance: checkAllowance(spender_address, amount)**
 ```javascript
 deployed_token.checkAllowance("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980", 100).then(function (data) {
     console.log(data);
@@ -91,7 +97,7 @@ deployed_token.checkAllowance("0x25666A25Ef50B0d87F1f41a47883D7583DCf7980", 100)
 
 ```
 
-Watch transfer of tokens.
+**Watch transfer of tokens.**
 ```javascript
 deployed_token.watch_transfer(function (data) {
    console.log(data.returnValues._from,data.returnValues._to,data.returnValues._value)

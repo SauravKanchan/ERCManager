@@ -141,11 +141,8 @@ npm test
     * Work in progress
 
 ## Meta
+Distributed under the MIT license. See [LICENSE](https://github.com/SauravKanchan/ERCManager/blob/master/LICENSE) for more information.
 
-
-Distributed under the MIT license. See ``LICENSE`` for more information.
-
-[LICENSE](https://github.com/SauravKanchan/ERCManager/blob/master/LICENSE)
 
 ### Contributing
 
@@ -163,5 +160,4 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/ercmanager.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/ercmanager
-[npm-downloads]: https://img.shields.io/npm/dw/ercmanager.svg
 

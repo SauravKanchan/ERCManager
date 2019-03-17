@@ -127,6 +127,8 @@ npm test
 
 ## Release History
 
+* 1.0.5
+    * Fix Bytecode 
 * 1.0.4
     * Add transferFrom, Approve, CheckAllowance
 * 1.0.3
